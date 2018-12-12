@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Aiursoft.Pylon;
 using Aiursoft.Pylon.Services;
+using Kahla.Home.Services;
 
 namespace Kahla.Home
 {
@@ -19,6 +20,8 @@ namespace Kahla.Home
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ServiceLocation>();
+            services.AddScoped<HTTPService>();
+            services.AddScoped<VersionChecker>();
             services.AddMvc();
         }
 
