@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Aiursoft.Pylon.Attributes;
 using Aiursoft.Pylon;
 using Kahla.Home.Services;
+using Kahla.Home.Models.HomeViewModels;
 
 namespace Kahla.Home.Controllers
 {
@@ -17,10 +18,15 @@ namespace Kahla.Home.Controllers
         {
             _version = version;
         }
+
         public async Task<IActionResult> Index()
         {
-            var latest = _version.CheckKahla();
-            return View();
+            var latest = await _version.CheckKahla();
+            var model = new IndexViewModel
+            {
+                LatestVersion = latest
+            };
+            return View(latest);
         }
 
         public IActionResult Error()

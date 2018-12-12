@@ -1,4 +1,6 @@
-﻿<header>
+﻿@model Kahla.Home.Models.HomeViewModels.IndexViewModel
+
+<header>
     <div class="container-new py-6 px-3 text-center">
         <a href="/">
             <img src="https://oss.aiursoft.com/MyPersonalFiles/512x512.png" alt="Kahla Desktop" width="96" height="96">
@@ -91,7 +93,7 @@
 @{ 
     var downloadRoot = "https://github.com/AiursoftWeb/Kahla.App/releases/download";
     var archiveRoot = "https://github.com/AiursoftWeb/Kahla.App/archive";
-    var version = Configuration["KahlaVersion"];
+    var version = Model.LatestVersion;
 }
 <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">

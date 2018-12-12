@@ -1,6 +1,7 @@
 ﻿using Aiursoft.Pylon.Exceptions;
 using Aiursoft.Pylon.Models;
 using Aiursoft.Pylon.Services;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,19 @@ namespace Kahla.Home.Services
     public class VersionChecker
     {
         private readonly HTTPService _http;
-        public VersionChecker(HTTPService http)
+        private readonly IConfiguration _configuration;
+        public VersionChecker(
+            HTTPService http,
+            IConfiguration configuration
+            )
         {
             _http = http;
+            _configuration = configuration;
         }
 
         public async Task<string> CheckKahla()
         {
-            var url = new AiurUrl("https://raw.githubusercontent.com", "/AiursoftWeb/Kahla.App/master/package.json", new { });
+            var url = new AiurUrl(_configuration["KahlaMasterPackageJson"], new { });
             var response = await _http.Get(url);
             var result = JsonConvert.DeserializeObject<NodePackageJson>(response);
             if (result.Name.ToLower() == "kahla")
