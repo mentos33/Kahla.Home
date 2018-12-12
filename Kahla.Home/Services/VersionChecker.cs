@@ -26,7 +26,7 @@ namespace Kahla.Home.Services
         public async Task<string> CheckKahla()
         {
             var url = new AiurUrl(_configuration["KahlaMasterPackageJson"], new { });
-            var response = await _http.Get(url);
+            var response = await _http.Get(url, false);
             var result = JsonConvert.DeserializeObject<NodePackageJson>(response);
             if (result.Name.ToLower() == "kahla")
             {
