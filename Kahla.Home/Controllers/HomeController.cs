@@ -26,7 +26,7 @@ namespace Kahla.Home.Controllers
             {
                 LatestVersion = latest
             };
-            return View(latest);
+            return View(model);
         }
 
         public IActionResult Error()

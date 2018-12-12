@@ -29,6 +29,9 @@
         <p class="col-md-8 mx-auto mb-4 f3-light">
             As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free.
         </p>
+        <p>
+            Latest version: <kbd>@Model.LatestVersion</kbd>
+        </p>
         <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="#" data-toggle="modal" data-target="#downloadModal">Download</a>
         <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="#" data-toggle="modal" data-target="#openModal">Open in browser</a>
         <p>
@@ -75,13 +78,23 @@
             </p>
         </div>
     </div>
-    <a class="btn btn-outline-white f4 mb-6" href="#" data-toggle="modal" data-target="#downloadModal">Download now</a>
+    <a class="btn btn-outline-white f4 mb-6" href="#" data-toggle="modal" data-target="#downloadModal">
+        <i class="fa fa-fw fa-download"></i>
+        Download now
+    </a>
+    <a class="btn btn-outline-white f4 mb-6 ml-3" href="@Configuration["GitHubAddress"]">
+        <i class="fa fa-fw fa-github"></i>
+        View on GitHub
+    </a>
     <hr class="my-6 mx-auto" style="width: 100px;">
 </div>
 <div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="openModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body text-center">
+                <h4 class="text-dark mb-3 mt-3">
+                    Version: @Model.LatestVersion
+                </h4>
                 <img src="/images/qrcode.png">
                 <p>
                     <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Open now</a>
