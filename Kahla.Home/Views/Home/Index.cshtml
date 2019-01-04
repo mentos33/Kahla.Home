@@ -1,5 +1,4 @@
 ﻿@model Kahla.Home.Models.HomeViewModels.IndexViewModel
-
 <header>
     <div class="container-new py-6 px-3 text-center">
         <a href="/">
@@ -18,13 +17,18 @@
             <li>
                 <a class="d-inline-block m-2" href="#">Help and community</a>
             </li>
+            <li>
+                <a class="d-inline-block m-2" href="@(new AiurUrl(ServiceLocation.API, "Api", "SetLang", new { Host = $"{Context.Request.Scheme}://{Context.Request.Host}", Path = Context.Request.Path }))">
+                    Language
+                </a>
+            </li>
         </ul>
     </div>
 </header>
 <div class="hero pt-6 text-center">
     <div class="container-new px-3">
         <h1 class="f00-light text-white">
-            Kahla - Connect everyone's thoughts
+            @Localizer["Kahla - Connect everyone's thoughts"]
         </h1>
         <p class="col-md-8 mx-auto mb-4 f3-light">
             As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free.
