@@ -1,4 +1,8 @@
 ﻿@model Kahla.Home.Models.HomeViewModels.IndexViewModel
+@{ 
+
+    ViewBag.Des = "As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free.";
+}
 <header>
     <div class="container-new py-6 px-3 text-center">
         <a href="/">
@@ -31,7 +35,7 @@
             @Localizer["Kahla - Connect everyone's thoughts"]
         </h1>
         <p class="col-md-8 mx-auto mb-4 f3-light">
-            As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free.
+            @ViewBag.Des
         </p>
         <p>
             Latest version: <kbd data-href="@Configuration["GitHubAddress"]">@Model.LatestVersion</kbd>
@@ -101,7 +105,7 @@
                 </h4>
                 <img src="/images/qrcode.png">
                 <p>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Open now</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">Open now</a>
                 </p>
             </div>
         </div>
@@ -131,10 +135,10 @@
                     <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).tar.gz" target="_blank">Others (tar.gz)</a>
                     <hr />
                     <h3>For Android and iOS</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Web<label class="text-muted">(We are working on native apps...)</label></a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">Web<label class="text-muted">(We are working on native apps...)</label></a>
                     <hr />
                     <h3>For other platforms</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Chrome OS, PWA</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">Chrome OS, PWA</a>
                     <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@archiveRoot/@vversion/@(version).zip" target="_blank">Source code</a>
                 </p>
             </div>
