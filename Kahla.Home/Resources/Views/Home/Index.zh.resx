@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,5 +119,113 @@
   </resheader>
   <data name="Kahla - Connect everyone's thoughts" xml:space="preserve">
     <value>卡拉 - 连接人的思想</value>
+  </data>
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
+  <data name="About Kahla" xml:space="preserve">
+    <value>关于卡拉</value>
+  </data>
+  <data name="Release notes" xml:space="preserve">
+    <value>发行说明</value>
+  </data>
+  <data name="Help and community" xml:space="preserve">
+    <value>帮助和社区</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Latest version:" xml:space="preserve">
+    <value>最新版本:</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="Open in browser" xml:space="preserve">
+    <value>在浏览器中打开</value>
+  </data>
+  <data name="By downloading, you agree to the" xml:space="preserve">
+    <value>通过下载, 您同意</value>
+  </data>
+  <data name="license agreement" xml:space="preserve">
+    <value>许可协议</value>
+  </data>
+  <data name="Ready to choose Kahla?" xml:space="preserve">
+    <value>准备好选择卡拉了吗？</value>
+  </data>
+  <data name="Business level" xml:space="preserve">
+    <value>商用级别</value>
+  </data>
+  <data name="Kahla is designed for commercial use. the service can be deployed inside your company and access to the full functionality of Kahla without internet." xml:space="preserve">
+    <value>卡拉是为商业用途而设计的。该服务可以部署在您的公司内, 并访问卡拉的全部功能, 而无需互联网。</value>
+  </data>
+  <data name="Cross-platform" xml:space="preserve">
+    <value>跨平台</value>
+  </data>
+  <data name="Kahla faced almost all mobile and desktop platforms. Use only one app for quick access by any customer. Kahla also supports open in browser without installation." xml:space="preserve">
+    <value>卡拉几乎面对所有的移动和桌面平台。仅使用一个应用即可让任何客户快速访问。卡拉还支持在浏览器中打开而无需安装。</value>
+  </data>
+  <data name="Highly secure" xml:space="preserve">
+    <value>高度安全</value>
+  </data>
+  <data name="Kahla supports end-to-end encrypted message communication and supports the automatic destruction of messages. Even if you don't trust Kahla's server, you can safely deliver secrets." xml:space="preserve">
+    <value>卡拉支持端到端加密消息通信, 并支持自动销毁消息。即使您不信任卡拉的服务器, 您也可以安全地传递机密。</value>
+  </data>
+  <data name="Download now" xml:space="preserve">
+    <value>立即下载</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>在 GitHub 上查看</value>
+  </data>
+  <data name="Open now" xml:space="preserve">
+    <value>现在打开</value>
+  </data>
+  <data name="For Windows" xml:space="preserve">
+    <value>Windows版</value>
+  </data>
+  <data name="Installer (exe)" xml:space="preserve">
+    <value>安装程序 (exe)</value>
+  </data>
+  <data name="Portable (zip)" xml:space="preserve">
+    <value>便携式 (zip)</value>
+  </data>
+  <data name="For Mac OS" xml:space="preserve">
+    <value>Mac OS版</value>
+  </data>
+  <data name="dmg" xml:space="preserve">
+    <value>dmg</value>
+  </data>
+  <data name="For Linux" xml:space="preserve">
+    <value>Linux版</value>
+  </data>
+  <data name="Debian, Ubuntu (deb)" xml:space="preserve">
+    <value>Debian, Ubuntu (deb)</value>
+  </data>
+  <data name="Redhat, Fedora (rpm)" xml:space="preserve">
+    <value>红帽, fedora (rpm)</value>
+  </data>
+  <data name="Others (tar.gz)" xml:space="preserve">
+    <value>其他 (tar. gz)</value>
+  </data>
+  <data name="For Android and iOS" xml:space="preserve">
+    <value>适用于安卓和 iOS</value>
+  </data>
+  <data name="Web" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="(We are working on native apps...)" xml:space="preserve">
+    <value>(我们正在开发原生应用程序...)</value>
+  </data>
+  <data name="For other platforms" xml:space="preserve">
+    <value>对于其他平台</value>
+  </data>
+  <data name="Chrome OS, PWA" xml:space="preserve">
+    <value>Chrome OS, PWA</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>源代码</value>
+  </data>
+  <data name="As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free." xml:space="preserve">
+    <value>卡拉作为跨平台的商用消息应用程序，它允许你在任何地点使用任意设备来加密通讯。 它还是完全开源和免费的。</value>
   </data>
 </root>
