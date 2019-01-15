@@ -1,4 +1,8 @@
-﻿@model Kahla.Home.Models.HomeViewModels.IndexViewModel
+@model Kahla.Home.Models.HomeViewModels.IndexViewModel
+@{ 
+
+    ViewBag.Des = Localizer["As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free."].Value;
+}
 <header>
     <div class="container-new py-6 px-3 text-center">
         <a href="/">
@@ -6,20 +10,20 @@
         </a>
         <ul class="nav list-style-none d-flex flex-justify-center f4">
             <li>
-                <a class="d-inline-block m-2 current" href="@ServiceLocation.WWW">Aiursoft</a>
+                <a class="d-inline-block m-2 current" href="@ServiceLocation.WWW">@Localizer["Aiursoft"]</a>
             </li>
             <li>
-                <a class="d-inline-block m-2 current" href="https://wiki.aiursoft.com/ReadDoc/Kahla/What%20is%20Kahla.md">About Kahla</a>
+                <a class="d-inline-block m-2 current" href="https://wiki.aiursoft.com/ReadDoc/Kahla/What%20is%20Kahla.md">@Localizer["About Kahla"]</a>
             </li>
             <li>
-                <a class="d-inline-block m-2" href="https://github.com/AiursoftWeb/Kahla.App/releases">Release notes</a>
+                <a class="d-inline-block m-2" href="https://github.com/AiursoftWeb/Kahla.App/releases">@Localizer["Release notes"]</a>
             </li>
             <li>
-                <a class="d-inline-block m-2" href="#">Help and community</a>
+                <a class="d-inline-block m-2" href="#">@Localizer["Help and community"]</a>
             </li>
             <li>
                 <a class="d-inline-block m-2" href="@(new AiurUrl(ServiceLocation.API, "Api", "SetLang", new { Host = $"{Context.Request.Scheme}://{Context.Request.Host}", Path = Context.Request.Path }))">
-                    Language
+                    @Localizer["Language"]
                 </a>
             </li>
         </ul>
@@ -31,16 +35,16 @@
             @Localizer["Kahla - Connect everyone's thoughts"]
         </h1>
         <p class="col-md-8 mx-auto mb-4 f3-light">
-            As a cross-platform business messaging app, Kahla can encrypt communications at any location, on any device. And it is completely open source and free.
+            @ViewBag.Des
         </p>
         <p>
-            Latest version: <kbd data-href="@Configuration["GitHubAddress"]">@Model.LatestVersion</kbd>
+            @Localizer["Latest version:"] <kbd data-href="@Configuration["GitHubAddress"]">@Model.LatestVersion</kbd>
         </p>
-        <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="#" data-toggle="modal" data-target="#downloadModal">Download</a>
-        <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="#" data-toggle="modal" data-target="#openModal">Open in browser</a>
+        <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="#" data-toggle="modal" data-target="#downloadModal">@Localizer["Download"]</a>
+        <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="#" data-toggle="modal" data-target="#openModal">@Localizer["Open in browser"]</a>
         <p>
-            By downloading, you agree to the
-            <a href="@(Values.Footer["Terms"])">license agreement</a>.
+            @Localizer["By downloading, you agree to the"]
+            <a href="@(Values.Footer["Terms"])">@Localizer["license agreement"]</a>@Localizer["."]
         </p>
         <div class="d-block width-fit mx-auto mt-6 mb-6">
             <img style="width:100%;max-width:640px;" src="~/images/screen.png" class="app-screenshot" />
@@ -49,7 +53,7 @@
 </div>
 <div class="container-new px-3 text-center">
     <h2 class="f0-light mb-3 text-white">
-        Ready to choose Kahla?
+        @Localizer["Ready to choose Kahla?"]
     </h2>
     <div class="d-md-flex flex-md-row col-xl-10 mx-auto text-white-75 f4 gut-lg">
         <div class="col-sm-10 mx-auto col-md-4 my-5 my-md-3">
@@ -57,38 +61,38 @@
                 <i class="fa fa-3x fa-bank"></i>
             </span>
             <h2 class="f2-light my-2 text-white lh-condensed">
-                Business level
+                @Localizer["Business level"]
             </h2>
             <p>
-                Kahla is designed for commercial use. the service can be deployed inside your company and access to the full functionality of Kahla without internet.
+                @Localizer["Kahla is designed for commercial use. the service can be deployed inside your company and access to the full functionality of Kahla without internet."]
             </p>
         </div>
         <div class="col-sm-10 mx-auto col-md-4 my-5 my-md-3">
             <i class="fa fa-3x fa-television "></i>
             <h2 class="f2-light my-2 text-white lh-condensed">
-                Cross-platform
+                @Localizer["Cross-platform"]
             </h2>
             <p>
-                Kahla faced almost all mobile and desktop platforms. Use only one app for quick access by any customer. Kahla also supports open in browser without installation.
+                @Localizer["Kahla faced almost all mobile and desktop platforms. Use only one app for quick access by any customer. Kahla also supports open in browser without installation."]
             </p>
         </div>
         <div class="col-sm-10 mx-auto col-md-4 my-5 my-md-3">
             <i class="fa fa-3x fa-lock"></i>
             <h2 class="f2-light my-2 text-white lh-condensed">
-                Highly secure
+                @Localizer["Highly secure"]
             </h2>
             <p>
-                Kahla supports end-to-end encrypted message communication and supports the automatic destruction of messages. Even if you don't trust Kahla's server, you can safely deliver secrets.
+                @Localizer["Kahla supports end-to-end encrypted message communication and supports the automatic destruction of messages. Even if you don't trust Kahla's server, you can safely deliver secrets."]
             </p>
         </div>
     </div>
     <a class="btn btn-outline-white f4 mb-6" href="#" data-toggle="modal" data-target="#downloadModal">
         <i class="fa fa-fw fa-download"></i>
-        Download now
+        @Localizer["Download now"]
     </a>
     <a class="btn btn-outline-white f4 mb-6 ml-3" href="@Configuration["GitHubAddress"]">
         <i class="fa fa-fw fa-github"></i>
-        View on GitHub
+        @Localizer["View on GitHub"]
     </a>
     <hr class="my-6 mx-auto" style="width: 100px;">
 </div>
@@ -101,7 +105,7 @@
                 </h4>
                 <img src="/images/qrcode.png">
                 <p>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Open now</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">@Localizer["Open now"]</a>
                 </p>
             </div>
         </div>
@@ -118,24 +122,24 @@
         <div class="modal-content">
             <div class="modal-body text-center" style="color:black">
                 <p>
-                    <h3>For Windows</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla.Setup.@(version).exe" target="_blank">Installer (exe)</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-@(version)-win.zip" target="_blank">Portable (zip)</a>
+                    <h3>@Localizer["For Windows"]</h3>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla.Setup.@(version).exe" target="_blank">@Localizer["Installer (exe)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-@(version)-win.zip" target="_blank">@Localizer["Portable (zip)"]</a>
                     <hr />
-                    <h3>For Mac OS</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-@(version).dmg" target="_blank">dmg</a>
+                    <h3>@Localizer["For Mac OS"]</h3>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-@(version).dmg" target="_blank">@Localizer["dmg"]</a>
                     <hr />
-                    <h3>For Linux</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla_@(version)_amd64.deb" target="_blank">Debian, Ubuntu (deb)</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).x86_64.rpm" target="_blank">Redhat, Fedora (rpm)</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).tar.gz" target="_blank">Others (tar.gz)</a>
+                    <h3>@Localizer["For Linux"]</h3>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla_@(version)_amd64.deb" target="_blank">@Localizer["Debian, Ubuntu (deb)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).x86_64.rpm" target="_blank">@Localizer["Redhat, Fedora (rpm)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).tar.gz" target="_blank">@Localizer["Others (tar.gz)"]</a>
                     <hr />
-                    <h3>For Android and iOS</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Web<label class="text-muted">(We are working on native apps...)</label></a>
+                    <h3>@Localizer["For Android and iOS"]</h3>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">@Localizer["Web"]<label class="text-muted">@Localizer["(We are working on native apps...)"]</label></a>
                     <hr />
-                    <h3>For other platforms</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@ServiceLocation.KahlaApp" target="_blank">Chrome OS, PWA</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@archiveRoot/@vversion/@(version).zip" target="_blank">Source code</a>
+                    <h3>@Localizer["For other platforms"]</h3>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">@Localizer["Chrome OS, PWA"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@archiveRoot/@vversion/@(version).zip" target="_blank">@Localizer["Source code"]</a>
                 </p>
             </div>
         </div>
