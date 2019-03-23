@@ -34,7 +34,7 @@ namespace Kahla.Home.Services
             }
             else
             {
-                throw new AiurUnexceptedResponse(new AiurProtocal()
+                throw new AiurUnexceptedResponse(new AiurProtocol()
                 {
                     Code = ErrorType.NotFound,
                     Message = "GitHub Json response is not related with Kahla!"
