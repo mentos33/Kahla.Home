@@ -22,6 +22,9 @@ namespace Kahla.Home
         {
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton<ServiceLocation>();
+
+            services.AddMemoryCache();
+
             services.AddScoped<HTTPService>();
             services.AddScoped<VersionChecker>();
             services.AddMvc()

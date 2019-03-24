@@ -8,36 +8,36 @@ using Aiursoft.Pylon.Attributes;
 using Aiursoft.Pylon;
 using Kahla.Home.Services;
 using Kahla.Home.Models.HomeViewModels;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Kahla.Home.Controllers
 {
     public class HomeController : Controller
     {
-        private static DateTime _cachedTime = DateTime.MinValue;
-        private static string _cachedVersion = "";
-
         private readonly VersionChecker _version;
-        public HomeController(VersionChecker version)
+        private readonly MemoryCache _cache;
+        public HomeController(
+            VersionChecker version,
+            MemoryCache cache)
         {
             _version = version;
+            _cache = cache;
         }
 
         public async Task<IActionResult> Index()
         {
-            string latest = null;
-            if (DateTime.UtcNow < _cachedTime + new TimeSpan(0, 20, 0) && !string.IsNullOrEmpty(_cachedVersion))
+            if (!_cache.TryGetValue("Version.Cache", out string version))
             {
-                latest = _cachedVersion;
-            }
-            else
-            {
-                latest = await _version.CheckKahla();
-                _cachedTime = DateTime.UtcNow;
-                _cachedVersion = latest;
+                version = await _version.CheckKahla();
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(20));
+
+                _cache.Set("Version.Cache", version, cacheEntryOptions);
             }
             var model = new IndexViewModel
             {
-                LatestVersion = latest
+                LatestVersion = version
             };
             return View(model);
         }
