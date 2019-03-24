@@ -15,10 +15,10 @@ namespace Kahla.Home.Controllers
     public class HomeController : Controller
     {
         private readonly VersionChecker _version;
-        private readonly MemoryCache _cache;
+        private readonly IMemoryCache _cache;
         public HomeController(
             VersionChecker version,
-            MemoryCache cache)
+            IMemoryCache cache)
         {
             _version = version;
             _cache = cache;
