@@ -29,7 +29,7 @@ namespace Kahla.Home
             services.AddScoped<VersionChecker>();
             services.AddMvc()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-                .AddDataAnnotationsLocalization(); ;
+                .AddDataAnnotationsLocalization();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

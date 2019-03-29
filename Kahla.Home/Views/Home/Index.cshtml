@@ -112,7 +112,8 @@
     </div>
 </div>
 @{
-    var downloadRoot = "https://github.com/AiursoftWeb/Kahla.App/releases/download";
+    //var downloadRoot = "https://github.com/AiursoftWeb/Kahla.App/releases/download";
+    var downloadRoot = "https://kahladownload.blob.core.windows.net/production/KahlaAndroid/Kahla-Android.apk";
     var archiveRoot = "https://github.com/AiursoftWeb/Kahla.App/archive";
     var version = Model.LatestVersion;
     var vversion = "v" + Model.LatestVersion;
@@ -123,20 +124,20 @@
             <div class="modal-body text-center" style="color:black">
                 <p>
                     <h3>@Localizer["For Windows"]</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla.Setup.@(version).exe" target="_blank">@Localizer["Installer (exe)"]</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-@(version)-win.zip" target="_blank">@Localizer["Portable (zip)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaWindows/Kahla.Setup.@(version).exe" target="_blank">@Localizer["Installer (exe)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaWindows/Kahla-@(version)-win.zip" target="_blank">@Localizer["Portable (zip)"]</a>
                     <hr />
                     <h3>@Localizer["For Mac OS"]</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-@(version).dmg" target="_blank">@Localizer["dmg"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaMacOS/Kahla-@(version).dmg" target="_blank">@Localizer["dmg"]</a>
                     <hr />
                     <h3>@Localizer["For Linux"]</h3>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla_@(version)_amd64.deb" target="_blank">@Localizer["Debian, Ubuntu (deb)"]</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).x86_64.rpm" target="_blank">@Localizer["Redhat, Fedora (rpm)"]</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/kahla-@(version).tar.gz" target="_blank">@Localizer["Others (tar.gz)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaLinux/kahla_@(version)_amd64.deb" target="_blank">@Localizer["Debian, Ubuntu (deb)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaLinux/kahla-@(version).x86_64.rpm" target="_blank">@Localizer["Redhat, Fedora (rpm)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaLinux/kahla-@(version).tar.gz" target="_blank">@Localizer["Others (tar.gz)"]</a>
                     <hr />
                     <h3>@Localizer["For Android and iOS"]</h3>
                     <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank">@Localizer["Web"]</a>
-                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/@vversion/Kahla-Android.apk" target="_blank">@Localizer["Android (apk)"]</a>
+                    <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="@downloadRoot/KahlaAndroid/Kahla-Android-@(version).apk" target="_blank">@Localizer["Android (apk)"]</a>
                     <a class="mx-1 my-3 f3 btn btn-large btn-outline-purple" href="//web.kahla.app" target="_blank"><label class="text-muted">@Localizer["(We are working on iOS app...)"]</label></a>
                     <hr />
                     <h3>@Localizer["For other platforms"]</h3>

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Aiursoft.Pylon.Attributes;
-using Aiursoft.Pylon;
 using Kahla.Home.Services;
 using Kahla.Home.Models.HomeViewModels;
 using Microsoft.Extensions.Caching.Memory;
